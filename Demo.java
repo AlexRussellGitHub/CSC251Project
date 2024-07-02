@@ -60,7 +60,7 @@ public class Demo {
                 System.out.printf("Policy Price: $%.2f\n", policy.calculatePolicyPrice());
                 System.out.println();
             }
-
+            System.out.println("There were " + Policy.getPolicyCount() + " Policy objects created.");
             System.out.println("The number of policies with a smoker is: " + smokerCount);
             System.out.println("The number of policies with a non-smoker is: " + nonSmokerCount);
 

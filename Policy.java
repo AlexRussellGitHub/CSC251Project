@@ -4,11 +4,17 @@ class Policy {
     private String providerName;
     private PolicyHolder policyHolder;
 
+    // Static field umber of policies created
+    private static int policyCount = 0;
+
     // followed by constructors for the Policy class
     public Policy(int policyNumber, String providerName, PolicyHolder policyHolder) {
         this.policyNumber = policyNumber;
         this.providerName = providerName;
         this.policyHolder = policyHolder;
+
+        // increment policyCOunt
+        policyCount++;
     }
 
     // getters for each field - No setters -> object fields are initialized through
@@ -47,6 +53,11 @@ class Policy {
         }
 
         return baseFee + fiftyPlusFee + smokerFee + bmiFee;
+    }
+
+    // policyCount getter
+    public static int getPolicyCount() {
+        return policyCount;
     }
 
     @Override
